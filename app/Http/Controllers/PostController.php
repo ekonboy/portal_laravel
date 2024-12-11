@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\SavePostRequest;
 
 class PostController extends Controller
 {
@@ -24,38 +25,73 @@ class PostController extends Controller
         return view('posts.show', ['post' => $post]);
     }
 
-    public function create(Post $post)
+    public function create()//Post $post quitamos esto y creamos una nueva instancia vacia
     {
-        return view('posts.create', ['post' => $post]);//devuelve una vista en la carpeta posts llamada create.blade.php
+        return view('posts.create', ['post' => new Post]);//devuelve una vista en la carpeta posts llamada create.blade.php
     }
 
 
-    public function store(Request $request)
+    public function store(SavePostRequest $request)
     {
-        $request->validate([
-            'title' => ['required','min:4'],
-            'body' => ['required' ]
-        ]);
+    
+
+
+        //dd($validated);
+
 
         //return request(); //esto muestra un json del contenido del form
         //creamos aqui lo mismo que con tinker con Eloquen:
-        $post = new Post;
-        $post->title = $request->input('title');
-        $post->body = $request->input('body');
-        $post->save();
+        //esta parte lo hacemos con el metodo create de eloquent: asi k comentamos las 4 lineas de abajo 
+               // $post = new Post;
+               // $post->title = $request->input('title');
+               // $post->body = $request->input('body');
+               // $post->save();
         //return $request->input('title');
-
        // return redirect()->route('posts.index');
 
+        Post::create($request->validated());//pasamos la variable validated para no tener que escribir los campos a mano
 
 
+        //session()->flash('status', 'Post created');//muestra un mensaje y dura solo 1 peticion
 
-       session()->flash('status', 'Post created');//muestra un mensaje y dura solo 1 peticion
-
-        return to_route('posts.index');
+        return to_route('posts.index')->with('status', 'Post created!!');
     }
 
 
+    public function edit(Post $post)
+    {
+        return view('posts.edit', ['post' => $post]);
+    }
 
+    public function update(SavePostRequest $request, Post $post)
+    {
+       
+
+
+        // $post = Post::find($post); al poner Post en la funcion, puedo quitar esta linea
+            //$post->title = $request->input('title');
+            //$post->body = $request->input('body');
+            //$post->save();
+
+
+            //version1
+            // $post->update([
+            //     'title' => $request->input('title'),
+            //     'body' => $request->input('body'),
+            // ]);
+
+
+            $post->update($request->validated());//llamamos al metodo validated a traves del request
+
+        
+        return to_route('posts.show', $post)->with('status', 'Post updated!');
+    }
+
+
+    public function destroy(Post $post){
+            //return $post; muestra el json del post
+            $post->delete();
+            return to_route('posts.index')->with('status',  __('Post Deleted'));
+    }
 
 }

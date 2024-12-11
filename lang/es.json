@@ -88,5 +88,8 @@
     "Body": "Contenido",
     "Create a new post": "Crear una nueva post",
     "Send": "Enviar",
-    "Back": "Volver"
+    "Back": "Volver",
+    "Edit": "Editar",
+    "Post Deleted": "Entrada eliminada",
+    "Delete": "Eliminar"
 }
