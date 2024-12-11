@@ -1,0 +1,71 @@
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.eot');
+    src: local('Nunito Regular'), local('Nunito-Regular'),
+        url('../fonts/Nunito-Regular.eot#iefix') format('embedded-opentype'),
+        url('../fonts/Nunito-Regular.woff2') format('woff2'),
+        url('../fonts/Nunito-Regular.woff') format('woff'),
+        url('../fonts/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Bold.eot');
+    src: local('Nunito Bold'), local('Nunito-Bold'),
+        url('../fonts/Nunito-Bold.eot#iefix') format('embedded-opentype'),
+        url('../fonts/Nunito-Bold.woff2') format('woff2'),
+        url('../fonts/Nunito-Bold.woff') format('woff'),
+        url('../fonts/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PayPaga';
+    src: url('../fonts/PayPaga-Light.eot');
+    src: local('PayPaga Light'), local('PayPaga-Light'),
+        url('../fonts/PayPaga-Light.eot#iefix') format('embedded-opentype'),
+        url('../fonts/PayPaga-Light.woff2') format('woff2'),
+        url('../fonts/PayPaga-Light.woff') format('woff'),
+        url('../fonts/PayPaga-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PayPaga';
+    src: url('../fonts/PayPaga-Regular.eot');
+    src: local('PayPaga'), local('PayPaga-Regular'),
+        url('../fonts/PayPaga-Regular.eot#iefix') format('embedded-opentype'),
+        url('../fonts/PayPaga-Regular.woff2') format('woff2'),
+        url('../fonts/PayPaga-Regular.woff') format('woff'),
+        url('../fonts/PayPaga-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PayPaga';
+    src: url('../fonts/PayPaga-Medium.eot');
+    src: local('PayPaga Medium'), local('PayPaga-Medium'),
+        url('../fonts/PayPaga-Medium.eot#iefix') format('embedded-opentype'),
+        url('../fonts/PayPaga-Medium.woff2') format('woff2'),
+        url('../fonts/PayPaga-Medium.woff') format('woff'),
+        url('../fonts/PayPaga-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PayPaga';
+    src: url('../fonts/PayPaga-Bold.eot');
+    src: local('Roboto Bold'), local('PayPaga-Medium'),
+        url('../fonts/PayPaga-Bold.eot#iefix') format('embedded-opentype'),
+        url('../fonts/PayPaga-Bold.woff2') format('woff2'),
+        url('../fonts/PayPaga-Bold.woff') format('woff'),
+        url('../fonts/PayPaga-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
