@@ -4,7 +4,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-use Illuminate\Http\Controllers\LocaleController;
+use App\Http\Controllers\LocaleController;
 
 use function Pest\Laravel\post;
 
