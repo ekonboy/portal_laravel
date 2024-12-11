@@ -10,12 +10,7 @@
     @vite(['resources/css/app.css'], 'resources/js/app.js')
     <link rel="shortcut icon" href="images/favicon.png" />
     <link rel="stylesheet" href="/assets/css/app.css" />
-
 </head>
-
-
-
-
 
 <body class="bg-gray-50 dark:bg-gray-1000 font-body text-sm leading-relaxed text-slate-600 dark:text-slate-300 font-normal min-w-[320px]">
     
