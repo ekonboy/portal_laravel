@@ -28,7 +28,9 @@ Route::get('/blog', [PostController::class, 'index'] )->name('posts.index');
 Route::get('/blog/create', [PostController::class, 'create'])-> name('posts.create');//el orden aqui es vip
 Route::post('/blog', [PostController::class, 'store'])-> name('posts.store');
 Route::get('/blog/{post}', [PostController::class, 'show'])-> name('posts.show');//rutas con parametros variables al final de todo
-
+Route::get('/blog/{post}/edit', [PostController::class, 'edit'])-> name('posts.edit');
+Route::patch('/blog/{post}', [PostController::class, 'update'])-> name('posts.update');
+Route::delete('/blog/{post}', [PostController::class, 'destroy'])-> name('posts.destroy');
 
 
 Route::view('nosotros','about')->name('about'); 
